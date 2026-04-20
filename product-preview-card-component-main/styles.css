@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+.card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .card-image {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.card-content {
+  padding: 24px;
+}
+
+@media (min-width: 600px) {
+  .card-content {
+    padding: 32px;
+  }
+}
+
+.category {
+  color: hsl(228, 12%, 48%);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.product-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.description {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.price-current {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: hsl(158, 36%, 37%);
+}
+
+.price-original {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.button {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+
+.button:focus {
+  outline: 2px solid hsl(212, 21%, 14%);
+  outline-offset: 2px;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
